@@ -1,0 +1,27 @@
+{
+  "overview": "A professional aesthetic clinic website for a hair and skin clinic in Chennai. Features service listings, before-and-after gallery, doctor profiles, appointment booking, and client testimonials — built for patient acquisition and consultation conversion.",
+  "features": [
+    "Hero section with clinic branding and consultation CTA",
+    "Services directory for hair and skin treatments",
+    "Before-and-after treatment gallery",
+    "Client testimonials carousel",
+    "Doctor/practitioner profile section",
+    "Appointment booking form",
+    "FAQ section",
+    "Contact section with location and hours",
+    "Sticky navigation header",
+    "Fully responsive design"
+  ],
+  "category": "healthcare-wellness",
+  "tags": [
+    "aesthetic-clinic",
+    "hair",
+    "skin",
+    "chennai",
+    "healthcare",
+    "beauty",
+    "appointments",
+    "landing-page"
+  ],
+  "last_updated": "2026-04-24T04:31:15.817Z"
+}

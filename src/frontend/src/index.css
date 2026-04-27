@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=DM+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: "Fraunces";
+    --font-body: "DM Sans";
+    --font-mono: monospace;
+    --radius: 0.875rem;
+
+    /* Warm cream background */
+    --background: 0.97 0.012 60;
+    --foreground: 0.18 0.03 220;
+
+    /* Cards slightly warmer */
+    --card: 0.995 0.008 55;
+    --card-foreground: 0.18 0.03 220;
+    --popover: 0.995 0.008 55;
+    --popover-foreground: 0.18 0.03 220;
+
+    /* Teal primary */
+    --primary: 0.46 0.14 205;
+    --primary-foreground: 0.98 0.005 60;
+
+    /* Warm sandy secondary */
+    --secondary: 0.74 0.07 52;
+    --secondary-foreground: 0.22 0.03 36;
+
+    --muted: 0.93 0.015 52;
+    --muted-foreground: 0.5 0.025 38;
+
+    /* Rose-gold accent */
+    --accent: 0.7 0.11 38;
+    --accent-foreground: 0.98 0.005 60;
+
+    --destructive: 0.54 0.22 25;
+    --destructive-foreground: 0.98 0 0;
+
+    --border: 0.89 0.012 52;
+    --input: 0.91 0.012 52;
+    --ring: 0.46 0.14 205;
+
+    --chart-1: 0.65 0.18 38;
+    --chart-2: 0.46 0.14 205;
+    --chart-3: 0.7 0.11 38;
+    --chart-4: 0.74 0.07 52;
+    --chart-5: 0.55 0.12 25;
+
+    --sidebar: 0.15 0.02 210;
+    --sidebar-foreground: 0.95 0.02 60;
+    --sidebar-primary: 0.7 0.11 38;
+    --sidebar-primary-foreground: 0.98 0.005 60;
+    --sidebar-accent: 0.25 0.02 36;
+    --sidebar-accent-foreground: 0.92 0.02 50;
+    --sidebar-border: 0.28 0.02 210;
+    --sidebar-ring: 0.7 0.11 38;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "DM Sans", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: "Fraunces", serif;
+  }
+}
+
+@layer utilities {
+  .font-body {
+    font-family: "DM Sans", sans-serif;
+  }
+
+  .font-display {
+    font-family: "Fraunces", serif;
+  }
+
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .shadow-elevated {
+    box-shadow: 0 8px 32px 0 rgba(20, 60, 80, 0.1), 0 2px 8px 0
+      rgba(20, 60, 80, 0.06);
+  }
+
+  .shadow-subtle {
+    box-shadow: 0 2px 10px 0 rgba(20, 60, 80, 0.06);
+  }
+
+  .gradient-accent {
+    background: linear-gradient(
+      135deg,
+      oklch(0.7 0.11 38) 0%,
+      oklch(0.74 0.07 52) 100%
+    );
+  }
+
+  .gradient-hero {
+    background: linear-gradient(
+      135deg,
+      oklch(0.18 0.03 220) 0%,
+      oklch(0.26 0.05 210) 60%,
+      oklch(0.32 0.08 200) 100%
+    );
+  }
+
+  .gradient-teal {
+    background: linear-gradient(
+      135deg,
+      oklch(0.46 0.14 205) 0%,
+      oklch(0.38 0.12 215) 100%
+    );
+  }
+
+  .text-accent-warm {
+    color: oklch(0.7 0.11 38);
+  }
+
+  .text-primary-teal {
+    color: oklch(0.46 0.14 205);
+  }
+
+  .border-teal-left {
+    border-left: 3px solid oklch(0.46 0.14 205);
+  }
+
+  .bg-teal-subtle {
+    background: oklch(0.46 0.14 205 / 0.06);
+  }
+
+  .bg-accent-subtle {
+    background: oklch(0.7 0.11 38 / 0.08);
+  }
+}

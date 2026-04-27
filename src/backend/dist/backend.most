@@ -1,0 +1,34 @@
+// Version: 1.0.0
+type AppointmentId__629999472 = Nat;
+type AppointmentStatus__949193971 = {#Cancelled; #Confirmed; #Pending};
+type Appointment__77617247 =
+  {
+    createdAt : Timestamp__177202075;
+    email : Text;
+    id : AppointmentId__629999472;
+    message : Text;
+    name : Text;
+    phone : Text;
+    service : Service__250518173;
+    status : AppointmentStatus__949193971
+  };
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Service__250518173 =
+  {
+    #HairConsultation;
+    #HairTransplant;
+    #HairTreatment;
+    #Other;
+    #SkinConsultation;
+    #SkinTreatment
+  };
+type Timestamp__177202075 = Int;
+actor {
+  stable appointments :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Appointment__77617247]];
+      var elementIndex : Nat__490723111
+    }
+};

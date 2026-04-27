@@ -1,0 +1,41 @@
+type Timestamp = int;
+type Service = 
+ variant {
+   HairConsultation;
+   HairTransplant;
+   HairTreatment;
+   Other;
+   SkinConsultation;
+   SkinTreatment;
+ };
+type AppointmentStatus = 
+ variant {
+   Cancelled;
+   Confirmed;
+   Pending;
+ };
+type AppointmentRequest = 
+ record {
+   email: text;
+   message: text;
+   name: text;
+   phone: text;
+   "service": Service;
+ };
+type AppointmentId = nat;
+type Appointment = 
+ record {
+   createdAt: Timestamp;
+   email: text;
+   id: AppointmentId;
+   message: text;
+   name: text;
+   phone: text;
+   "service": Service;
+   status: AppointmentStatus;
+ };
+service : {
+  getAppointment: (id: AppointmentId) -> (opt Appointment) query;
+  listAppointments: () -> (vec Appointment) query;
+  submitAppointment: (req: AppointmentRequest) -> (Appointment);
+}
